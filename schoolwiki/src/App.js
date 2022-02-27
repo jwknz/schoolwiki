@@ -13,29 +13,29 @@ const App = () => {
 
   useEffect(() => {
 
-    function createDoc() {
+    // function createDoc() {
 
-      fetch('https://docs.googleapis.com/v1/documents', {
-        method: "POST",
-        headers: new Headers({ 'Authorization': 'Bearer '+ googleUser.accessToken}),
-      })
-      .then(res => res.json())
-      .then(data => {
-        console.log(data.documentId)
-      })
-    }
+    //   fetch('https://docs.googleapis.com/v1/documents', {
+    //     method: "POST",
+    //     headers: new Headers({ 'Authorization': 'Bearer '+ googleUser.accessToken}),
+    //   })
+    //   .then(res => res.json())
+    //   .then(data => {
+    //     console.log(data.documentId)
+    //   })
+    // }
   
-    function createSheet() {
+    // function createSheet() {
   
-      fetch('https://sheets.googleapis.com/v4/spreadsheets', {
-        method: "POST",
-        headers: new Headers({ 'Authorization': 'Bearer '+ googleUser.accessToken}),
-      })
-      .then(res => res.json())
-      .then(data => {
-        console.log(data.documentId)
-      })
-    }
+    //   fetch('https://sheets.googleapis.com/v4/spreadsheets', {
+    //     method: "POST",
+    //     headers: new Headers({ 'Authorization': 'Bearer '+ googleUser.accessToken}),
+    //   })
+    //   .then(res => res.json())
+    //   .then(data => {
+    //     console.log(data.documentId)
+    //   })
+    // }
   
     function processText(text, pstyle, el) {
   
