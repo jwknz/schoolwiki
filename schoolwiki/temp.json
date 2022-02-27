@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "54e8613c-bb6c-4a23-856a-486372b7ac1a",
+		"name": "Concentric Cloud Voice Prod",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Users",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "47a07614-dc50-4bad-bdc4-cb18ae0c0cf7",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "X-AUTH-TOKEN",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://voice.concentric.nz/users#",
+					"protocol": "https",
+					"host": [
+						"voice",
+						"concentric",
+						"nz"
+					],
+					"path": [
+						"users"
+					],
+					"hash": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add New Extension",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "d7431de2-0a9c-4b42-bfc8-37a00a43624c",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "X-AUTH-TOKEN",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "CallerIdName",
+						"value": "API User",
+						"type": "default"
+					},
+					{
+						"key": "ShortNumber",
+						"value": "0",
+						"type": "default"
+					},
+					{
+						"key": "LinePlan",
+						"value": "2",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://voice.concentric.local/users/new",
+					"protocol": "http",
+					"host": [
+						"voice",
+						"concentric",
+						"local"
+					],
+					"path": [
+						"users",
+						"new"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
