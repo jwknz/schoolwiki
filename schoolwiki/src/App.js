@@ -102,7 +102,37 @@ const App = () => {
             headers: new Headers({ "X-AUTH-TOKEN" : "47a07614-dc50-4bad-bdc4-cb18ae0c0cf7" })
           })
           .then(res => res.json())
-          .then(data => console.log(data))
+          .then(data => {
+
+            let contentDiv = document.querySelector('#content')
+            contentDiv.innerHTML = ""
+
+            let table = document.createElement('table')
+            let tbody = document.createElement('tbody')
+
+            for (let d of data.users) {
+
+              let tr = document.createElement('tr')
+
+              let td1 = document.createElement('td')
+              let td1text = document.createTextNode(d.CallerIdName)
+              td1.appendChild(td1text)
+
+              let td2 = document.createElement('td')
+              let td2text = document.createTextNode(d.ShortNumber)
+              td2.appendChild(td2text)
+
+              tr.appendChild(td1)
+              tr.appendChild(td2)
+
+              tbody.appendChild(tr)
+
+            }
+
+            table.appendChild(tbody)
+            contentDiv.appendChild(table)
+          
+          })
   
         } else {
           console.log("not a valid file")
